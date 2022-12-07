@@ -23,6 +23,11 @@
     font-size: 1.2rem;
 }
 
+.nav__items li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
 .nav__items li {
     list-style: none;
 }
