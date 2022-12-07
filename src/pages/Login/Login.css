@@ -1,0 +1,75 @@
+.Login__main_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lgn__container {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
+    height: 60%;
+}
+
+.lgn__left,
+.lgn__right {
+    width: 50%;
+}
+
+.lgn__inputBox>label {
+    margin-right: 1rem;
+}
+
+.lgn__inputBox>h1 {
+    font-size: 3.5rem;
+}
+
+.lgn__inputBox input::placeholder {
+    font-size: 1.2rem;
+}
+
+.lgn__inputBox {
+    margin: 1.5rem 0rem;
+    font-size: 1.4rem;
+}
+
+.lgn__inputBox>input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    /* background-color: rgb(237, 242, 233); */
+    padding: .3rem 1rem;
+}
+
+.lgn__inputBox>input[type=submit] {
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgb(106, 155, 181);
+    background: linear-gradient(90deg, rgba(106, 155, 181, 1) 6%, rgba(51, 55, 112, 1) 90%);
+    border-radius: .5rem;
+    width: 40%;
+}
+
+.lgn__forget>a {
+    text-decoration: none;
+}
+
+.lgn__left {
+    background: url('../../assets/login.jpg')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.lgn__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
