@@ -1,0 +1,32 @@
+.nav__container {
+    width: 100%;
+    background-color: rgb(26, 44, 44);
+}
+
+.nav__items_container {
+    padding: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__items {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__items_container>a,
+.nav__items li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav__items li {
+    list-style: none;
+}
+
+.nav__logo {
+    font-weight: bold;
+}
