@@ -12,7 +12,7 @@
     justify-content: space-evenly;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 1rem;
-    height: 60%;
+    height: 80%;
 }
 
 .lgn__left,
@@ -37,11 +37,10 @@
     font-size: 1.4rem;
 }
 
-.lgn__inputBox>input {
+.lgn__inputBox>input[type='text'] {
     border: none;
     outline: none;
     border-bottom: 1px solid gray;
-    /* background-color: rgb(237, 242, 233); */
     padding: .3rem 1rem;
 }
 
