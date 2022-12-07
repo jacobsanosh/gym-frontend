@@ -1,6 +1,8 @@
 import React from 'react'
 import './Register.css'
+import { useNavigate } from "react-router-dom";
 function Register() {
+    const navigate=useNavigate();
   return (
     <div className="Login__main_container">
     <div className="lgn__container">
@@ -32,7 +34,9 @@ function Register() {
             <textarea placeholder='Enter your need' className='reg__textarea' rows={5} cols={40}></textarea>
           </div>
           <div className="lgn__inputBox">
-            <input type="submit" value="register" />
+            <input type="submit" value="register" onClick={()=>{
+                navigate('/')
+            }}/>
           </div>
           
           
