@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <div className="nav__container">
       <div className="nav__items_container">
-      <Link href="/" className="nav__logo">
+      <Link to="/" className="nav__logo">
         sculpt
       </Link>
       <ul className="nav__items">

@@ -3,14 +3,14 @@ import Footer from '../../components/Footer/Footer'
 import HomeLayout from '../../components/HomeLayout/HomeLayout'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import OurServices from '../../components/OurServices/OurServices'
-import ServiceProvided from '../../components/ServicesProvided/ServiceProvided'
+import OurTrainers from '../../components/OurTrainers/OurTrainers'
 
 const LandingPage = () => {
   return (
     <MainLayout>
       <HomeLayout/>
-      <ServiceProvided/>
       <OurServices/>
+      <OurTrainers/>
       <Footer/>
     </MainLayout>
   )
