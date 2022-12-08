@@ -1,0 +1,31 @@
+.home__container {
+    width: 100%;
+    background-color: red;
+    height: 1000px;
+    background: url('../../assets/bg.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home__section h1 {
+    /* margin: 0px; */
+    color: white;
+    font-size: 6rem;
+}
+
+.home__section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* background: red; */
+    height: 60%;
+}
+
+.home__content {
+    /* background: #79839a59; */
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 3rem;
+}
