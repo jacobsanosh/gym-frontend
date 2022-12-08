@@ -1,0 +1,30 @@
+.gym__container {
+    background-color: rgb(232, 242, 242);
+    margin: 1rem auto;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    width: 70%;
+}
+
+.gym__left img {
+    height: 15rem;
+}
+
+.gym__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;
+}
+
+.react-multi-carousel-list {
+    width: 80%;
+    margin: auto;
+}
+
+.react-multi-carousel-item--active {
+    margin: 1rem!important;
+}
