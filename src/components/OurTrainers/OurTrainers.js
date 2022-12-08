@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './OurTrainers.css'
 function OurTrainers() {
   return (
-    <div>OurTrainers</div>
+    <div>
+      our Trainers
+    </div>
   )
 }
 

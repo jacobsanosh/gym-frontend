@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 function Navbar() {
-  const navigate = useNavigate();
+
   return (
     <div className="nav__container">
       <div className="nav__items_container">
@@ -11,7 +11,7 @@ function Navbar() {
         sculpt
       </Link>
       <ul className="nav__items">
-        <li class="active">
+        <li className="active">
           <Link to="/">Home</Link>
         </li>
         <li>

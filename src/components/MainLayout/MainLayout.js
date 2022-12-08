@@ -1,12 +1,12 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-function MainLayout({children}) {
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+function MainLayout({ children }) {
   return (
     <div>
-        <Navbar/>
-        {children}
+      <Navbar />
+      {children}
     </div>
-  )
+  );
 }
 
-export default MainLayout
+export default MainLayout;

@@ -1,0 +1,20 @@
+.serv__items {
+    height: 20rem;
+    width: 20rem;
+    background-color: rgb(232, 242, 242);
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.serv__items img {
+    height: 15rem;
+}
+
+.react-multi-carousel-list {
+    width: 80%;
+    margin: auto;
+}
+
+.react-multi-carousel-item--active {
+    margin: 1rem!important;
+}
