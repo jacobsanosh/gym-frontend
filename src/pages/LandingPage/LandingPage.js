@@ -4,6 +4,7 @@ import HomeLayout from '../../components/HomeLayout/HomeLayout'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import OurGyms from '../../components/OurGyms/OurGyms'
 import OurServices from '../../components/OurServices/OurServices'
+import Details from '../../components/details/Details'
 
 
 const LandingPage = () => {
@@ -11,6 +12,7 @@ const LandingPage = () => {
     <MainLayout>
       <HomeLayout/>
       <OurServices/>
+      <Details/>
       <OurGyms/>
       <Footer/>
     </MainLayout>

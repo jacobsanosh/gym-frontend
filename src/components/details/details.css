@@ -1,0 +1,10 @@
+.details{
+    text-align: justify;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    /* tex: center; */
+    font-size: 20px;
+}
+.heading{
+    color: #05b3a4;
+}
