@@ -2,6 +2,7 @@ import React from "react";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import MainLayout from "../../components/MainLayout/MainLayout";
 function Register() {
   const navigate = useNavigate();
   //creating an useState
@@ -57,6 +58,9 @@ function Register() {
     }
   };
   return (
+    <MainLayout>
+
+   
     <div className="Login__main_container">
       <div className="lgn__container">
         <div className="lgn__left"></div>
@@ -114,6 +118,7 @@ function Register() {
         </div>
       </div>
     </div>
+    </MainLayout>
   );
 }
 

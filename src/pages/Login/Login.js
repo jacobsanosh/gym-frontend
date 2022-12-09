@@ -1,10 +1,13 @@
 import React from "react";
 import "./Login.css";
+
 import {useNavigate} from 'react-router-dom'
+import MainLayout from "../../components/MainLayout/MainLayout";
 function Login() {
   const navigate=useNavigate();
   return (
-    <div className="Login__main_container">
+    <MainLayout>
+           <div className="Login__main_container">
       <div className="lgn__container">
         <div className="lgn__left"></div>
         <div className="lgn__right">
@@ -32,6 +35,8 @@ function Login() {
         </div>
       </div>
     </div>
+    </MainLayout>
+ 
   );
 }
 

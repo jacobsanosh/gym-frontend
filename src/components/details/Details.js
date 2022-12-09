@@ -2,7 +2,7 @@ import React from "react";
 import './details.css'
 function Details(){
     return(
-        <div>
+        <div className="details__div">
             <h1>
                 Sculpt
             </h1>
