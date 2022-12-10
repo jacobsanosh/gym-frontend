@@ -25,7 +25,13 @@ function Login() {
       setLoading(true);
       const response = await login(username, password, loginType);
       if (response.status === 200) {
-        navigate("/");
+        if(loginType==='trainer')
+        {
+          navigate("/");
+        }
+        else{
+          navigate('/users')
+        }
       }
     } catch (error) {
       if (error.response.status === 404) {

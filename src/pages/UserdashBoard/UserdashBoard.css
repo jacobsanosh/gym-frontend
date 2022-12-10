@@ -1,0 +1,67 @@
+.user__profile_left img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.user__profile_div {
+    display: flex;
+}
+
+.user__profile_div,
+.trainer__div {
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f2f8f8;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+}
+
+.choose_btn {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    background-color: #90a0a0;
+    color: white;
+}
+
+table {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ECE9E9;
+}
+
+th,
+td {
+    /* cell */
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+}
+
+th {
+    /* header cell */
+    font-weight: 700;
+    text-align: left;
+    color: #272838;
+    border-bottom: 2px solid #EB9486;
+    position: sticky;
+    top: 0;
+    background-color: #F9F8F8;
+}
+
+td {
+    /* body cell */
+    color: #7E7F9A;
+}
