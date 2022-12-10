@@ -4,7 +4,7 @@ import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import MainLayout from "../../components/MainLayout/MainLayout";
-import { registeruser } from "../../api";
+import { registertrainer, registeruser } from "../../api";
 
 function Register() {
   const navigate = useNavigate();
@@ -87,7 +87,7 @@ function Register() {
       
       setLoading(true)
       if (usertype === "trainer") {
-        const response=await registeruser(email,password,gymname,place,phone,specialization,qualification);
+        const response=await registertrainer(email,password,gymname,place,phone,specialization,qualification);
         
         if(response.status===200){
           navigate('/')

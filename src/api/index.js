@@ -82,5 +82,6 @@ async function registertrainer(
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
   }
+  return response
 }
 export { getTrainers, login, registeruser,registertrainer };
