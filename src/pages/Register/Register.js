@@ -20,6 +20,14 @@ function Register() {
             <input type="text" placeholder="enter gym name" />
           </div>
           <div className="lgn__inputBox">
+            <label>place</label>
+            <input type="text" placeholder="enter your place" />
+          </div>
+          <div className="lgn__inputBox">
+            <label>phone number</label>
+            <input type="tel" placeholder="enter phone number" />
+          </div>
+          <div className="lgn__inputBox">
             <label>specialization</label>
             <input type="text" placeholder="enter your specialization" />
           </div>
@@ -82,28 +90,7 @@ function Register() {
               <input type="radio" value="user" name="type_user" /> User
             </div>
             {Trainer()}
-            {/* {usertype==='trainer'?<>
-            <div className="lgn__inputBox">
-              <label>age</label>
-              <input type="number" placeholder="enter ages" />
-            </div>
-            <div className="lgn__inputBox">
-              <label>height</label>
-              <input type="number" placeholder="enter height in cm" />
-            </div>
-            <div className="lgn__inputBox">
-              <label>weight</label>
-              <input type="number" placeholder="enter weight in kg" />
-            </div>
-            <div className="lgn__inputBox"></div>
-            <div className="lgn__inputBox">
-              <textarea
-                placeholder="Enter your need"
-                className="reg__textarea"
-                rows={5}
-                cols={40}
-              ></textarea>
-            </div></>:<></>} */}
+    
 
             <div className="lgn__inputBox">
               <input
