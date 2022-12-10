@@ -1,5 +1,7 @@
 import axios from "axios";
-const token = btoa("user1@gmail.com:password");
+const email=localStorage.getItem('email')
+const password=localStorage.getItem('password')
+const token = btoa(`${email}:${password}`);
 const client = axios.create({
   baseURL: "http://localhost:5000/",
   headers: {
@@ -84,4 +86,25 @@ async function registertrainer(
   }
   return response
 }
-export { getTrainers, login, registeruser,registertrainer };
+
+async function getWorkout(email){
+  const response=await client.get('/user/workout')
+  return response;
+}
+
+async function complete_workout(id)
+{
+  //user/workout.work-id
+  const response= await client.post(`/user/workout/${id}`)
+  return response
+}
+async function getDiet(email)
+{
+  const response=await client.get('/user/diet')
+  return response;
+}
+async function complete_diet(id){
+  const response= await client.post(`/user/diet/${id}`)
+  return response
+}
+export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet};

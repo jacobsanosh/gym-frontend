@@ -1,7 +1,35 @@
-import React from "react";
+import React ,{useState,useEffect}from "react";
+import { getDiet, getWorkout } from "../../api";
 import url from "../../assets/user.jpg";
+import DietRow from "../../components/DietRow/DietRow";
+import WorkoutRow from "../../components/WorkoutRow/WorkoutRow";
 import "./UserdashBoard.css";
 function UserdashBoard() {
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [diet, setDiet] = useState([])
+    useEffect(() => {
+        (async()=>{
+            try{
+                setLoading(true)
+                const respose=await getWorkout()
+                const result=await getDiet() 
+                console.log(respose)
+                setData(respose.data.workouts)
+                setDiet(result.data.diets)
+                console.log("diet data",result.data.diets)
+            }
+            catch(error)
+            {
+                console.log(error)
+            }
+            finally{
+                setLoading(false)
+            }
+        })()
+    }, [])
+  
+
   return (
     <div className="user__dash_container">
       {/* section for user profiles   */}
@@ -23,6 +51,7 @@ function UserdashBoard() {
           <h2>work outs are</h2>
           <table>
             <thead>
+              
               <tr>
                 <th>workout name</th>
                 <th>part of body</th>
@@ -34,15 +63,14 @@ function UserdashBoard() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td><input type="checkbox" id="work" name="done" value="completed" />completed</td>
-              </tr>
+              
+              {data.map((item,index)=>{
+                
+                    return( 
+                        <WorkoutRow item={item} key={index}/>
+                )
+                })}
+              
             </tbody>
           </table>
         </div>
@@ -51,25 +79,21 @@ function UserdashBoard() {
           <table>
             <thead>
               <tr>
-                <th>workout name</th>
-                <th>part of body</th>
-                <th>description</th>
-                <th>date</th>
-                <th>set</th>
-                <th>reps</th>
+                <th>food name</th>
+                <th>quantity</th>
+                <th>protein</th>
+                <th>no of times</th>
+                <th>time</th>
                 <th>completed</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td><input type="checkbox" id="work" name="done" value="completed" />completed</td>
-              </tr>
+            {diet.map((item,index)=>{
+                
+                return( 
+                    <DietRow item={item} key={index}/>
+            )
+            })}
             </tbody>
           </table>
         </div>
