@@ -27,6 +27,7 @@ async function login(email, password, type) {
   if (response.status === 200) {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
+    localStorage.setItem("loginType", type);
   }
   return response;
 }
