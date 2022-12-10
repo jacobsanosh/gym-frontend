@@ -7,9 +7,9 @@ const client=axios.create({
     }
 })
 const getTrainers=async()=>{
-    console.log("demo")
+    // console.log("demo")
     const response=await client.get('/user/trainer');
-    console.log(response.data.trainers)
+    // console.log(response.data.trainers)
     return response.data.trainers;
 }
 export {getTrainers}

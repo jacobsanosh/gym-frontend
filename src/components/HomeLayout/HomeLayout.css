@@ -9,6 +9,22 @@
     background-size: cover;
 }
 
+.home__btn {
+    background: transparent;
+    color: white;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    background-color: rgb(84, 84, 70);
+    width: 30%;
+    opacity: .6;
+    text-decoration: none;
+}
+
 .home__section h1 {
     /* margin: 0px; */
     color: white;

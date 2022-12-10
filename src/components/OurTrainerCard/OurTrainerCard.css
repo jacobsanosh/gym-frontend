@@ -5,10 +5,14 @@
 }
 
 .ourtrainer__container {
-    display: flex;
     width: 60%;
+    margin: auto;
+}
+
+.trainer_item {
+    display: flex;
     background-color: rgb(229, 240, 240);
-    margin: 1rem auto;
+    margin: 2rem auto;
     align-items: center;
     border-radius: 1rem;
     padding: 1rem;
