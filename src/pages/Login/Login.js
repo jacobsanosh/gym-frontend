@@ -11,6 +11,11 @@ function Login() {
   const [password, setPassword] = useState(
     localStorage.getItem("password") ?? ""
   );
+
+  const [loginType, setLoginType] = useState(
+    localStorage.getItem("loginType") ?? "user"
+  ); // ["user", "trainer"]
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -18,13 +23,13 @@ function Login() {
     try {
       setError("");
       setLoading(true);
-      const response = await login(username, password, "user");
+      const response = await login(username, password, loginType);
       if (response.status === 200) {
         navigate("/");
       }
     } catch (error) {
       if (error.response.status === 404) {
-        setError("User Does not exist");
+        setError(`${loginType} does not exist`);
       } else if (error.response.status === 401) {
         setError("Incorrect Password");
       }
@@ -61,6 +66,27 @@ function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
+              </div>
+              <div
+                className="lgn__inputBox"
+                onChange={(e) => {
+                  setLoginType(e.target.value);
+                }}
+              >
+                <input
+                  type="radio"
+                  value="trainer"
+                  name="type_user"
+                  checked={loginType === "trainer"}
+                />{" "}
+                Trainer
+                <input
+                  type="radio"
+                  value="user"
+                  name="type_user"
+                  checked={loginType === "user"}
+                />{" "}
+                User
               </div>
               <div className="lgn__inputBox">
                 <div className="error">{error}</div>
