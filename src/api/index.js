@@ -1,6 +1,6 @@
 import axios from "axios";
-const email=localStorage.getItem('email')
-const password=localStorage.getItem('password')
+const email = localStorage.getItem("email");
+const password = localStorage.getItem("password");
 const token = btoa(`${email}:${password}`);
 const client = axios.create({
   baseURL: "http://localhost:5000/",
@@ -54,7 +54,7 @@ async function registeruser(
     need,
     age,
   });
-  console.log("respose at index",response)
+  console.log("respose at index", response);
   if (response.status === 200) {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
@@ -84,42 +84,67 @@ async function registertrainer(
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
   }
-  return response
-}
-
-async function getWorkout(email){
-  const response=await client.get('/user/workout')
   return response;
 }
 
-async function complete_workout(id)
-{
+async function getWorkout(email) {
+  const response = await client.get("/user/workout");
+  return response;
+}
+
+async function complete_workout(id) {
   //user/workout.work-id
-  const response= await client.post(`/user/workout/${id}`)
-  return response
-}
-async function getDiet(email)
-{
-  const response=await client.get('/user/diet')
+  const response = await client.post(`/user/workout/${id}`);
   return response;
 }
-async function complete_diet(id){
-  const response= await client.post(`/user/diet/${id}`)
-  return response
+async function getDiet(email) {
+  const response = await client.get("/user/diet");
+  return response;
+}
+async function complete_diet(id) {
+  const response = await client.post(`/user/diet/${id}`);
+  return response;
 }
 
-async function getUserProfile(email){
-  const response=await client.get('/user')
-  return response
+async function getUserProfile(email) {
+  const response = await client.get("/user");
+  return response;
 }
 
-async function delete_trainer(){
-  const respose=await client.delete('/user/trainer')
-  return respose
+async function delete_trainer() {
+  const respose = await client.delete("/user/trainer");
+  return respose;
 }
-async function choose_trainer(email)
-{
-  const response=await client.post(`/user/trainer/${email}`)
-  return response
+async function choose_trainer(email) {
+  const response = await client.post(`/user/trainer/${email}`);
+  return response;
 }
-export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer,choose_trainer};
+
+async function getCreatedWorkouts() {
+  const response = await client.get("/trainer/workout");
+  return response;
+}
+
+async function addWorkout(workoutName, partOfBody, description) {
+  const response = await client.post("/trainer/workout", {
+    workoutName,
+    partOfBody,
+    description,
+  });
+  return response;
+}
+export {
+  getTrainers,
+  login,
+  registeruser,
+  registertrainer,
+  getWorkout,
+  complete_workout,
+  getDiet,
+  complete_diet,
+  getUserProfile,
+  delete_trainer,
+  choose_trainer,
+  getCreatedWorkouts,
+  addWorkout,
+};
