@@ -26,7 +26,8 @@ function RequestuserCard({data,loaddata}) {
             const response=await userRejected(email);
             if(response.status===200)
             {
-                alert("user added")
+                alert("user removed")
+                loaddata()
             }
         }
         catch(error)
