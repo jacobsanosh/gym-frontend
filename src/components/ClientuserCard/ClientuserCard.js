@@ -142,7 +142,7 @@ function ClientuserCard({ data }) {
           {workoutLoading ? (
             <Spinner />
           ) : (
-            <Grid container>
+            <Grid container spacing={2}>
               <Grid item xs={12}>
                 <h1>ADD A NEW WORKOUT PLAN</h1>
               </Grid>
@@ -222,7 +222,7 @@ function ClientuserCard({ data }) {
           {dietLoading ? (
             <Spinner />
           ) : (
-            <Grid container>
+            <Grid container spacing={2}>
               <Grid item xs={12}>
                 <h1>ADD A NEW DIET PLAN</h1>
               </Grid>
