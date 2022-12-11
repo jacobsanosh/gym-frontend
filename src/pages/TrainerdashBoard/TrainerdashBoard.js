@@ -57,7 +57,9 @@ function TrainerdashBoard() {
         <button className='choose_btn' onClick={(e)=>{
             navigate('/manageWorkout')
         }}>workout plan</button>
-        <button className='choose_btn' onClick={(e)=>{}}>diet plan</button>
+        <button className='choose_btn' onClick={(e)=>{
+            navigate('/manageDiet')
+        }}>diet plan</button>
        </div>
        {type==='client'?getClients():getRequests()}
     </MainLayout>

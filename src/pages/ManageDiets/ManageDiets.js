@@ -151,7 +151,7 @@ function ManageDiet() {
               </Grid>
 
               <Grid item xs={6} justifyContent="center" alignItems="center">
-                <Typography variant="h6">Body Part</Typography>
+                <Typography variant="h6">protein</Typography>
               </Grid>
               <Grid item xs={6}>
                 <TextField
@@ -164,7 +164,7 @@ function ManageDiet() {
                 />
               </Grid>
               <Grid item xs={6} justifyContent="center" alignItems="center">
-                <Typography variant="h6">Description</Typography>
+                <Typography variant="h6">quantity</Typography>
               </Grid>
               <Grid item xs={6}>
               <TextField
