@@ -1,5 +1,5 @@
 import './App.css';
-import { LandingPage,Login,Register,TrainersPage, UserdashBoard } from './pages';
+import { LandingPage,Login,Register,TrainerdashBoard,TrainersPage, UserdashBoard } from './pages';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/trainers' element={<TrainersPage/>}/>
         <Route path='/users' element={<UserdashBoard/>}/>
+        <Route path='/trainerdash' element={<TrainerdashBoard/>}/>
 
       </Routes>
       </BrowserRouter>

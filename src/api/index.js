@@ -122,4 +122,23 @@ async function choose_trainer(email)
   const response=await client.post(`/user/trainer/${email}`)
   return response
 }
-export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer,choose_trainer};
+async function requestedUser()
+{
+  const response=await client.get('/trainer/user/requested')
+  return response
+}
+async function assignedTrainer(){
+  const response=await client.get('/trainer/user/assigned')
+  return response
+}
+async function userAccepted(email)
+{
+  const response=await client.post(`/trainer/user/${email}`)
+  return response
+}
+async function userRejected(email)
+{
+  const response=await client.delete(`/trainer/user/${email}`)
+  return response
+}
+export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer,choose_trainer,requestedUser,assignedTrainer,userAccepted,userRejected};
