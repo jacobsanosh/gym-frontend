@@ -9,11 +9,9 @@ function OurTrainerCard(props) {
         <img src={img} alt="" className="trainer__img" />
         <div className="detail__container">
           <p>name:{props.data.name}</p>
-          <p>specialization;{props.data.specialization}</p>
-          <p>place</p>
-          <p>rating</p>
-          <p>ph number</p>
-          <button className="details__btn">Profile</button>
+          <p>specialization:{props.data.specialization}</p>
+          <p>place:{props.data.place}</p>
+          <p>ph number:{props.data.phonenumber}</p>
           {props.data.requestStatus==='true'?<button className="details__btn" disabled={true}>request sended</button>:
           <button className="details__btn">take training</button>}
         </div>

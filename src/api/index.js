@@ -107,4 +107,14 @@ async function complete_diet(id){
   const response= await client.post(`/user/diet/${id}`)
   return response
 }
-export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet};
+
+async function getUserProfile(email){
+  const response=await client.get('/user')
+  return response
+}
+
+async function delete_trainer(){
+  const respose=await client.delete('/user/trainer')
+  return respose
+}
+export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer};
