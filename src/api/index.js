@@ -117,4 +117,9 @@ async function delete_trainer(){
   const respose=await client.delete('/user/trainer')
   return respose
 }
-export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer};
+async function choose_trainer(email)
+{
+  const response=await client.post(`/user/trainer/${email}`)
+  return response
+}
+export { getTrainers, login, registeruser,registertrainer,getWorkout,complete_workout ,getDiet,complete_diet,getUserProfile,delete_trainer,choose_trainer};

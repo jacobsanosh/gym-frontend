@@ -10,7 +10,7 @@ function UserdashBoard() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [diet, setDiet] = useState([])
-    const [getuser, setgetUser] = useState([])
+    const [getuser, setgetUser] = useState({})
     useEffect(() => {
         (async()=>{
             try{
@@ -42,6 +42,10 @@ function UserdashBoard() {
         alert("trainer removed successfully")
         setDiet([])
         setData([])
+        setgetUser({
+          ...getuser,
+          assigned_trainer:null
+        })
       }
     }
     catch(error){
@@ -120,7 +124,7 @@ function UserdashBoard() {
         </div>
       </div>
       <div className="choose_trainer">
-        {(getuser.trainerStatus)!=="accepted"?
+        {(getuser.assigned_trainer)===null?
            <button className="choose_btn" onClick={(e)=>{
             navigate('/trainers')
            }}>choose an trainer</button>:

@@ -10,9 +10,9 @@ const TrainersPage = () => {
      (async()=>{
       const data=await getTrainers();
       setTrainers(data)
-      console.log("new data is ",trainers)
+      console.log("new data is ",data)
      })()
-  }, [trainers])
+  }, [])
   return (
     <MainLayout>
       {trainers.map((items,index)=>{
