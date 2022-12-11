@@ -1,10 +1,12 @@
 import React,{useState,useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import { assignedTrainer, requestedUser } from '../../api'
 import ClientuserCard from '../../components/ClientuserCard/ClientuserCard'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import RequestuserCard from '../../components/RequestuserCard/RequestuserCard'
 import './TrainerdashBoard.css'
 function TrainerdashBoard() {
+    const navigate=useNavigate();
     const [type, setType] = useState("client")
     const [requestuser, setRequestuser] = useState([])
     const [clients, setClients] = useState([])
@@ -46,11 +48,16 @@ function TrainerdashBoard() {
             </div>
         )
     }
+    
   return (
     <MainLayout>
        <div className="see_data_btn">
         <button className='choose_btn' onClick={(e)=>{setType("client")}}>Clients</button>
         <button className='choose_btn' onClick={(e)=>{setType("request")}}  >requests</button>
+        <button className='choose_btn' onClick={(e)=>{
+            navigate('/manageWorkout')
+        }}>workout plan</button>
+        <button className='choose_btn' onClick={(e)=>{}}>diet plan</button>
        </div>
        {type==='client'?getClients():getRequests()}
     </MainLayout>
