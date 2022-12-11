@@ -1,0 +1,40 @@
+.user__img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+
+.ourtrainer__container {
+    width: 60%;
+    margin: auto;
+}
+
+.user_item {
+    display: flex;
+    background-color: rgb(229, 240, 240);
+    margin: 2rem auto;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.detail__container {
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.details__btn {
+    width: 40%;
+    margin: .5rem;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    background: rgb(81, 113, 115);
+    background: linear-gradient(90deg, rgba(81, 113, 115, 1) 17%, rgba(73, 149, 138, 1) 57%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: .5rem;
+}

@@ -1,0 +1,17 @@
+.see_data_btn {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    margin: 1.5rem auto;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.choose_trainer {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}

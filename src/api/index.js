@@ -119,6 +119,26 @@ async function choose_trainer(email) {
   const response = await client.post(`/user/trainer/${email}`);
   return response;
 }
+async function requestedUser()
+{
+  const response=await client.get('/trainer/user/requested')
+  return response
+}
+async function assignedTrainer(){
+  const response=await client.get('/trainer/user/assigned')
+  return response
+}
+async function userAccepted(email)
+{
+  const response=await client.post(`/trainer/user/${email}`)
+  return response
+}
+async function userRejected(email)
+{
+  const response=await client.delete(`/trainer/user/${email}`)
+  return response
+}
+
 
 async function getCreatedWorkouts() {
   const response = await client.get("/trainer/workout");
@@ -147,4 +167,8 @@ export {
   choose_trainer,
   getCreatedWorkouts,
   addWorkout,
+  requestedUser,
+  assignedTrainer,
+  userAccepted,
+  userRejected
 };

@@ -27,7 +27,7 @@ function Login() {
       if (response.status === 200) {
         if(loginType==='trainer')
         {
-          navigate("/");
+          navigate("/trainerdash");
         }
         else{
           navigate('/users')
