@@ -2,6 +2,7 @@ import './App.css';
 import { LandingPage,Login,Register,TrainerdashBoard,TrainersPage, UserdashBoard } from './pages';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ManageWorkout from './pages/ManageWorkouts/ManageWorkouts';
+import ManageDiet from './pages/ManageDiets/ManageDiets';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route path='/users' element={<UserdashBoard/>}/>
         <Route path='/trainerdash' element={<TrainerdashBoard/>}/>
         <Route path='/manageWorkout' element={<ManageWorkout/>}/>
+        <Route path='/manageDiet' element={<ManageDiet/>}/>
 
       </Routes>
       </BrowserRouter>

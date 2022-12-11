@@ -153,6 +153,20 @@ async function addWorkout(workoutName, partOfBody, description) {
   });
   return response;
 }
+
+async function getCreatedDiets() {
+  const response = await client.get("/trainer/diet");
+  return response;
+}
+
+async function addDiet(name, protein, quantity) {
+  const response = await client.post("/trainer/diet", {
+    name,
+    protein,
+    quantity,
+  });
+  return response;
+}
 export {
   getTrainers,
   login,
@@ -170,5 +184,7 @@ export {
   requestedUser,
   assignedTrainer,
   userAccepted,
-  userRejected
+  userRejected,
+  getCreatedDiets,
+  addDiet,
 };

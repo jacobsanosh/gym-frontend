@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  empty-cells: show;
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ece9e9;
+}
+
+th,
+td {
+  /* cell */
+  padding: 0.75rem;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+th {
+  /* header cell */
+  font-weight: 700;
+  color: #272838;
+  border-bottom: 2px solid #eb9486;
+  position: sticky;
+  top: 0;
+  background-color: #f9f8f8;
+}
+
+td {
+  /* body cell */
+  color: #7e7f9a;
+}
+
+tr {
+    width: 100%;
+}
