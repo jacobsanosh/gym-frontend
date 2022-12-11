@@ -8,6 +8,7 @@ import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 
 import AddIcon from "@mui/icons-material/Add";
+import MainLayout from "../../components/MainLayout/MainLayout";
 // import { createTheme } from "@mui/system";
 
 // const accentTheme = createTheme({
@@ -66,6 +67,8 @@ function ManageDiet() {
 
   return (
     // <ThemeProvider theme={accentTheme}>
+      <MainLayout>
+
       <div className="user__dash_container">
         <h1>Your Workout Plans</h1>
         <div className="work__out">
@@ -192,6 +195,8 @@ function ManageDiet() {
           </Box>
         </Modal>
       </div>
+              
+      </MainLayout>
     // </ThemeProvider>
   );
 }
