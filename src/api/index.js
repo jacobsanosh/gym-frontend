@@ -178,6 +178,16 @@ async function assignWorkout(userEmail, workoutName, sets, reps) {
   return response;
 }
 
+async function assignDiet(userEmail, dietName, noOfTimes, time) {
+  const response = await client.post("/trainer/diet/assign", {
+    userEmail,
+    dietName,
+    noOfTimes,
+    time,
+  });
+  return response;
+}
+
 export {
   getTrainers,
   login,
@@ -198,5 +208,6 @@ export {
   userRejected,
   getCreatedDiets,
   addDiet,
-  assignWorkout
+  assignWorkout,
+  assignDiet,
 };
