@@ -160,8 +160,8 @@ function ManageWorkout() {
                   onChange={(e) => setPartOfBody(e.target.value)}
                   fullWidth
                   variant="outlined"
-                  name="workoutName"
-                  label="Workout Name"
+                  name="partOfBody"
+                  label="Body Part"
                 />
               </Grid>
               <Grid item xs={6} justifyContent="center" alignItems="center">
