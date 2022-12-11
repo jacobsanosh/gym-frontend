@@ -9,6 +9,10 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.choose_btn {
+    width: 10rem;
+}
+
 .choose_trainer {
     width: 40%;
     margin: auto;
