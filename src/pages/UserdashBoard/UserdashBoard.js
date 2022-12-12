@@ -4,7 +4,7 @@ import { delete_trainer, getDiet, getUserProfile, getWorkout } from "../../api";
 import url from "../../assets/user.jpg";
 import DietRow from "../../components/DietRow/DietRow";
 import WorkoutRow from "../../components/WorkoutRow/WorkoutRow";
-
+import MainLayout from '../../components/MainLayout/MainLayout'
 import "./UserdashBoard.css";
 function UserdashBoard() {
     const [data, setData] = useState([])
@@ -55,6 +55,9 @@ function UserdashBoard() {
   }
   const navigate=useNavigate();
   return (
+    <MainLayout>
+
+    
     <div className="user__dash_container">
       {/* section for user profiles   */}
       <div className="user__profile_div">
@@ -135,6 +138,7 @@ function UserdashBoard() {
         
       </div>
     </div>
+    </MainLayout>
   );
 }
 

@@ -14,12 +14,24 @@ function Navbar() {
         <li className="active">
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
+        {console.log('local value are',localStorage.getItem('email'))}
+        {localStorage.getItem('email')===""?
+        <>
+         <li>
+         <Link to="/login">Login</Link>
+       </li>
+       <li>
+         <Link to="/register">Register</Link>
+       </li>
+       </>
+        :<>
+          <li>
+         <Link to="/users">Logged in</Link>
+       </li>
+        </>
+        
+      }
+       
         <li>
           <Link to="/login">About us</Link>
         </li>
