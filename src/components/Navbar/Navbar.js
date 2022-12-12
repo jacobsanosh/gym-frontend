@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+import {Link as Scroller}from 'react-scroll'
 function Navbar() {
   const navigate=useNavigate();
   return (
@@ -37,7 +38,7 @@ function Navbar() {
       }
        
         <li>
-          <Link to="/login">About us</Link>
+          <Scroller to="details " smooth={true}>About us</Scroller>
         </li>
       
       </ul>

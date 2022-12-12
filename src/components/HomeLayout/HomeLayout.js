@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {Link as Scroller} from 'react-scroll'
 import './HomeLayout.css'
 function HomeLayout() {
   return (
@@ -8,7 +9,7 @@ function HomeLayout() {
           <div className="home__content">
             <h1>Sculpt Urself</h1>
             <div className="home__btn_section">
-            <Link to="#details" className='home__btn'>know more</Link>
+            <Scroller to="details"smooth={true} className='home__btn'>know more</Scroller>
             <Link to="/login"className='home__btn'>explore</Link>
             </div>
          
