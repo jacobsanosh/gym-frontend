@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Navbar() {
-
+  const navigate=useNavigate();
   return (
     <div className="nav__container">
       <div className="nav__items_container">
@@ -21,12 +21,16 @@ function Navbar() {
          <Link to="/login">Login</Link>
        </li>
        <li>
+        {/* change value of email */}
          <Link to="/register">Register</Link>
        </li>
        </>
         :<>
           <li>
-         <Link to="/users">Logged in</Link>
+         <div className="logout" onClick={(e)=>{
+          localStorage.setItem('email','')
+          navigate('/')
+         }} >logout</div>
        </li>
         </>
         
