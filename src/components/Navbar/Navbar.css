@@ -1,7 +1,7 @@
 .nav__container {
     width: 100%;
     background-color: rgb(26, 44, 44);
-    position: fixed;
+    /* position: fixed; */
 }
 
 .nav__items_container {
