@@ -30,6 +30,7 @@ function Navbar() {
           <li>
          <div className="logout" onClick={(e)=>{
           localStorage.setItem('email','')
+          localStorage.setItem('password','')
           navigate('/')
          }} >logout</div>
        </li>
